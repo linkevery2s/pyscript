@@ -23,7 +23,7 @@
     const Enter = document.querySelector('.enter');
 
     Enter.addEventListener('click', () => {
-      alert("aa");
+
       let KEvent = new KeyboardEvent("keydown", { keyCode: 40, altKey: false, shiftKey: true, key: "Enter" });
       document.dispatchEvent(KEvent);
 
