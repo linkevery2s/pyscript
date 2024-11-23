@@ -1,11 +1,27 @@
 <!DOCTYPE HTML>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-  </head>
-  <body>
-    <py-repl></py-repl>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+  <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+  <script type="module">
+
+    const Enter = document.querySelector('.enter');
+
+    Enter.addEventListener('click', () => {
+      alert("aa");
+      let KEvent = new KeyboardEvent("keydown", { keyCode: 40, altKey: false, shiftKey: true, key: "Enter" });
+      document.dispatchEvent(KEvent);
+
+    });
+
+  </script>
+</head>
+
+<body>
+  <div class="enter">実行</div>
+  <py-repl auto-generate="true"></py-repl>
+</body>
+
 </html>
